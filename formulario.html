@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Contato</title>
+    <link rel="stylesheet" href="/css/formulario.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <form id="contactForm">
+        <fieldset>
+            <legend>Formulário de Contato</legend>
+
+            <label for="firstName">Nome:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Sobrenome:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="phone">Telefone:</label>
+            <input type="text" id="phone" name="phone" placeholder="(00) 00000-0000" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="exemplo@dominio.com" required>
+
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <label for="language">Língua:</label>
+            <select id="language" name="language" required>
+                <option value="">Selecione...</option>
+                <option value="english">Inglês</option>
+                <option value="spanish">Espanhol</option>
+                <option value="french">Francês</option>
+                <option value="portuguese">Português (pt-br)</option>
+            </select>
+
+            <label for="fileUpload">Upload do protótipo (PDF, DOC, DOCX, JPEG, PNG):</label>
+            <input type="file" id="fileUpload" name="fileUpload" accept=".pdf, .doc, .docx, .jpeg, .jpg, .png" required>
+
+            <label for="languages">Linguagens preferidas:</label>
+            <select id="languages" name="languages" multiple required>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="javascript">JavaScript</option>
+                <option value="python">Python</option>
+                <option value="java">Java</option>
+            </select>
+
+            <label>Banco de dados recomendado:</label>
+            <label><input type="radio" name="dbType" value="mysql" required> MySQL</label>
+            <label><input type="radio" name="dbType" value="postgresql" required> PostgreSQL</label>
+            <label><input type="radio" name="dbType" value="mongodb" required> MongoDB</label>
+
+            <label for="meetingShift">Turno preferido para reuniões:</label>
+            <select id="meetingShift" name="meetingShift" required>
+                <option value="">Selecione...</option>
+                <option value="morning">Manhã</option>
+                <option value="afternoon">Tarde</option>
+                <option value="evening">Noite</option>
+            </select>
+
+            <label for="meetingTime">Melhor horário sugerido para reuniões:</label>
+            <input type="time" id="meetingTime" name="meetingTime" required>
+
+            <label for="deliveryDate">Previsão de entrega desejada:</label>
+            <input type="date" id="deliveryDate" name="deliveryDate" required>
+
+            <button type="button" onclick="clearForm()">Limpar</button>
+            <button type="submit">Enviar</button>
+        </fieldset>
+    </form>
+</body>
+</html>
